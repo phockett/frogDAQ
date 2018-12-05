@@ -19,13 +19,15 @@ Structure:
     - frogDemo.py provides use examples, including required local settings for comms.
 
 To do:
-    - Finish restructuring.
+    - Finish restructuring & testing current version.
     - Add interface layer for handling other hardware types.
+    - Finish python packaging (inc. dependencies).
 
 This code:
     Paul Hockett
-    paul@femtolab.ca
-    femtolab.ca
-    github.com/phockett  [not yet posted]
+
+    http://femtolab.ca
+
+    https://github.com/phockett/frogDAQ
 
 Released under GNU GPL v3.
