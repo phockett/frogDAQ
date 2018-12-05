@@ -1,0 +1,33 @@
+TO DO
+    - class inheritence and scope for referenced modules.
+    - Position precision from stage? (See fsmm() method).  Also fs precision, set in delays()
+    - Analysis code to expand: sample sizes (pow2), recon types (blind and SHG only at the moment) and parameters (currently hard-coded)
+    - Generalise to other spectrometers & stages.  Via unified hardware IO interface layer...?
+(See also #TODO items)
+
+Version history
+    04/12/18    v0.4
+                Converted to standard package structure, may have broken some things
+                Added optional module loading for hardware layer
+                Tidied up a little bit
+                NEEDS TESTING.
+
+    18/11/18    v0.3 packaged
+                Implemented ".frg" save type, Trebino group Frog format
+                Implemented
+
+    19/09/18    Fixed issues with recon and interpolation.
+                STILL A LITTLE CHECKING to do here - possible data-flipping...?
+
+    06/09/18    v0.2 packaged
+                Added frog.spec() for spectrometer free-run
+                All working aside from recon image plotting when interpolated...?
+    27/08/18    Tided up recon code & interp routine, making use of crop()
+    24/08/18    Added subclasses for plot and recon data (structures)
+                Finished implementing plotting routines
+                Fixed recon data-size issues
+    21/08/18    Added basic data save and read (pickle only)
+
+    08/08/18    v0.1 packaged for distribution
+    06/08/18    Added froglib for analysis
+    04/08/18    Basic working version
