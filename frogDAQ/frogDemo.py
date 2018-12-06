@@ -86,7 +86,7 @@ stage.move_to(t0, wait=True)
 X.scan(plotFlag = True)
 
 #%% Save data (defaults to current DIR, datestamp format)
-X.save()
+X.saveFrog()
 
 #%% View spectra with same settings
 
@@ -99,4 +99,25 @@ X.ROI.waveLim = [700, 900]
 # Run spectrometer, push any key to stop
 X.spec()
 
-#%% ********** FROG analysis 
+#%% ********** FROG analysis
+
+# Plot data over selected range
+X.plot(waveLim = [700, 900])
+
+# Basic call to recon code (if froglib present)
+X.recon()
+
+# Recon with selected data ranges
+X.recon(waveLim = [740, 860], fsLim = [-150, 150])
+
+#%% ********** Data IO
+
+#  Load a data set
+dataPath = r'~/frogData'
+file = r'frogDataFile.pkl'
+filePath = os.path.join(dataPath, file)
+
+X.loadFrog(filePath)
+
+# Export in "frog" format
+X.saveFrog(saveType='f')

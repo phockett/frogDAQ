@@ -33,6 +33,9 @@ Known issues/bugs:
 
           286 - status read, changed comparison value to bytes: add ".decode()" to serial read.
 
+    - Pickle save function currently limited to raw data (t, spectrum) only.
+
+
 
 This code:
     Paul Hockett
