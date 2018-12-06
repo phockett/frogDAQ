@@ -1,7 +1,7 @@
 Femtolab FROG code
 ==================
 
-Basic code for running frog measurements & reconstruction.
+Basic code for running FROG (Frequency Resolved Optical Gating) measurements & reconstruction.
 
 Assumes:
     - Ocean Optics spectrometer
@@ -34,6 +34,7 @@ Known issues/bugs:
           286 - status read, changed comparison value to bytes: add ".decode()" to serial read.
 
     - Pickle save function currently limited to raw data (t, spectrum) only.
+    - Reconstruction with froglib implements SHG or blind (default) reconstruction, see  https://github.com/xmhk/froglib for further details.
 
 
 

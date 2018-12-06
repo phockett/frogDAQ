@@ -105,10 +105,10 @@ X.spec()
 X.plot(waveLim = [700, 900])
 
 # Basic call to recon code (if froglib present)
-X.recon()
+X.reconFL()
 
 # Recon with selected data ranges
-X.recon(waveLim = [740, 860], fsLim = [-150, 150])
+X.reconFL(waveLim = [740, 860], fsLim = [-150, 150])
 
 #%% ********** Data IO
 
