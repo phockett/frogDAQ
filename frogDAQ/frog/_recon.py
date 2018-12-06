@@ -79,5 +79,6 @@ def reconFL(self, waveLim = None, fsLim = None, dimInterp = None):
 
     # Plot results
     # frlib.simplerecresult(self.ROI.dataInterp, self.reconRes, wRange = self.ROI.wavelengths, tRange = self.ROI.fs)
-    frlib.simplerecresult(self.ROI.dataInterp, self.reconRes, wRange = self.ROI.waveInterp, tRange = self.ROI.fsInterp)
+    # frlib.simplerecresult(self.ROI.dataInterp, self.reconRes, wRange = self.ROI.waveInterp, tRange = self.ROI.fsInterp)
+    frlib.simplerecresult(self.ROI.dataInterp, self.reconRes)   # wRange and tRange only supported in modified froglib code, not original.
     plt.show()
