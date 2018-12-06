@@ -21,7 +21,7 @@ setup(
     # long_description_content_type="text/rst",
     author='Paul Hockett',
     author_email='paul@femtolab.ca',
-    url='',
+    url='https://github.com/phockett/frogDAQ',
     license=license,
     packages=find_packages(exclude=('tests', 'docs'))
 )
