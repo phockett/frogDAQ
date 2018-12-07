@@ -48,6 +48,8 @@ This code:
 Released under GNU GPL v3.
 
 
-**Sample FROG scan for broadband UV pulse**
+*Sample FROG scan for broadband UV pulse*
 
 .. image:: https://github.com/phockett/frogDAQ/blob/master/frogDAQ/demo/2018-10-31_15-29-54_frog_UV_50_20_15.5_comp.png
+
+See demo directory for more.
