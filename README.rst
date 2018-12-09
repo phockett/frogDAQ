@@ -26,11 +26,11 @@ To do:
 Known issues/bugs:
     - newportESP module encoding may give errors (likely a python version and/or pyserial version change - tested with newportESP v1.0, python v3.6.6, pyserial v3.4)
 
-      Note: in many cases, just adding .decode() to the function call will convert to bytestring, as required.
+      Note: adding .encode() or .decode() to the function call will convert to bytestring, as required.
 
       Lines to change in newportESP:
           122 - main serial write statement: add ".encode()" to serial write.
-
+          
           286 - status read, changed comparison value to bytes: add ".decode()" to serial read.
 
     - Pickle save function currently limited to raw data (t, spectrum) only.
