@@ -111,13 +111,15 @@ X.reconFL()
 X.reconFL(waveLim = [740, 860], fsLim = [-150, 150])
 
 #%% ********** Data IO
+import os
 
-#  Load a data set
-dataPath = r'~/frogData'
-file = r'frogDataFile.pkl'
+#  Load a data set into a new frog object
+dataPath = r'demo'
+file = r'2018-10-31_15-29-54_frog_UV_50_20_15.5_comp.pkl'
 filePath = os.path.join(dataPath, file)
 
-X.loadFrog(filePath)
+X = frog(None,None)     # Init blank frog object
+X.loadFrog(filePath)    # Load data
 
-# Export in "frog" format
+# Export in "frog" format (Trebino group frog code definition)
 X.saveFrog(saveType='f')
