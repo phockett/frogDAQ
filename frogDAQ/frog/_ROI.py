@@ -1,3 +1,7 @@
+# 06/05/21 Added imports here as they seem to be broken currently (testing in Python 3.9)
+import numpy as np
+from scipy import interpolate
+# import matplotlib.pyplot as plt
 
 # Set nested classes to use for structure-like objects for ROIs and recon
 # Empty class is like a dynamic structure, although may have side-effects.
@@ -21,7 +25,7 @@ class setROI():
 
 # Crop data to region of interest, using ROI structure for settings
 def crop(self, waveLim = None, fsLim = None, interpFlag = False):
-
+    
     # Set limits to defaults, or use preset values, if not specified.
     if fsLim is None and self.ROI.fsLim is None:
         self.ROI.fsLim = [self.fs[0], self.fs[-1]]
@@ -64,7 +68,7 @@ def interpROI(self, s = None, plotFlag = False):
     dim = self.ROI.data.shape
     self.ROI.dim = [dim[0], dim[1], dim[0]*dim[1]]
 
-    newDim = self.ROI.dimInterp[0]
+    newDim = self.ROI.dimInterp[0].astype(int) # Force to int for linspace etc. 
 
     # Set value for s, if not passed - choose very roughly by ROI size. If s is too small, interp tends to hang.
     if s is None:

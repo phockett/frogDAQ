@@ -1,3 +1,8 @@
+# 06/05/21 Added imports here as they seem to be broken currently (testing in Python 3.9)
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.gridspec import GridSpec
+
 # Plot data. Optional limits can be passed as lists, defaults to full range
 def plot(self, fsLim = None, waveLim = None, fig = None):
 

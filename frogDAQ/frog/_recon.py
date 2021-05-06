@@ -1,3 +1,17 @@
+# 06/05/21 Added imports here as they seem to be broken currently (testing in Python 3.9)
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Import froglib for frog reconstruction routines
+try:
+    # sys.path.append(os.path.join(os.curdir,'froglib-master'))      # Set explicit path if desired
+    import froglib as frlib
+except ImportError as e:
+    if e.msg != "No module named 'froglib'":
+        raise
+    print('* Froglib not found, FROG reconstruction routines not available. ')
+
+
 class setRecon():
     """Class for reconstruction params & resutls.
 
@@ -74,7 +88,9 @@ def reconFL(self, waveLim = None, fsLim = None, dimInterp = None):
         self.ROI.fsInterp = self.ROI.fs
 
     # Run recon - pass data or sqrt(data) for fitting ("amplitude" data)
-    self.reconRes = frlib.simplerec(self.ROI.dataInterp, iterations=self.reconIter, mode=self.reconMode, gatepulse = self.gatepulse, svd = self.reconSVD)
+    # 06/05/21 - removed self.reconIter
+    self.reconRes = frlib.simplerec(self.ROI.dataInterp, iterations=self.recon.iterMax,
+                                    mode=self.recon.mode, gatepulse = self.recon.gp, svd = self.recon.SVD)
     # self.reconRes = frlib.simplerec(np.sqrt(self.ROI.dataInterp+np.abs(np.min(self.ROI.dataInterp))), iterations=self.reconIter, mode=self.reconMode, gatepulse = self.gatepulse, svd = self.reconSVD)
 
     # Plot results

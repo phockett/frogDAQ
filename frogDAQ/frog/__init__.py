@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Module Imports
+# 06/05/21 Duplicated some fo these imports in class method files as they seem to be broken/out of scope currently (testing in Python 3.9)
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -93,3 +94,4 @@ class frog():
         # Init data structures for ROI and recon (as subclasses)
         self.ROI = self.setROI()
         self.recon = self.setRecon(WR = (self.wavelengths[0],self.wavelengths[-1]))  # Default to full wavelength range.
+        
