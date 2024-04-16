@@ -85,7 +85,7 @@ def run(devList, devID=0, intT=100000, frames=0, avg=10, waveLim = None, pltPaus
 
     # Set figure
     fig = plt.figure(figsize=(16,12))
-    fig.canvas.set_window_title('OO Capture')
+    # fig.canvas.set_window_title('OO Capture')
     ax = fig.add_subplot(1,1,1)
 
     # Event handlers

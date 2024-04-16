@@ -16,7 +16,7 @@ def plot(self, fsLim = None, waveLim = None, fig = None):
     if fig is None:
         fig = plt.figure(figsize=(16,12))
 
-    fig.canvas.set_window_title('Frog v0.3')
+    # fig.canvas.set_window_title('Frog v0.3')
 
     # ax = fig.add_subplot(1,1,1)
     gs = GridSpec(6,6)
@@ -27,7 +27,7 @@ def plot(self, fsLim = None, waveLim = None, fig = None):
     ax1.axes.xaxis.tick_top()
     ax1.set_xlabel('t/fs')
     ax1.axes.xaxis.set_label_position('top')
-    ax1.set_ylabel('$\lambda$/nm')
+    #ax1.set_ylabel('$\lambda$/nm')
 
     # Integrated over spectrum
     ax2 = plt.subplot(gs[-1,:-1])
@@ -46,7 +46,7 @@ def plot(self, fsLim = None, waveLim = None, fig = None):
     # ax3.invert_yaxis()
     ax3.axes.yaxis.tick_right()
     ax3.axes.grid()
-    ax3.set_ylabel('$\lambda$/nm')
+    #ax3.set_ylabel('$\lambda$/nm')
     ax3.axes.yaxis.set_label_position('right')
 
 
