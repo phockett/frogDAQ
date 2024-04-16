@@ -1,3 +1,6 @@
+# 09/04/24 - adding import here, currently missing/broken?
+from frogDAQ.spec import OOfunc as OO
+import matplotlib.pyplot as plt
 
 # Run a frog scan
 
